@@ -1,0 +1,26 @@
+
+.form_create_user{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+.create_input{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.not_empty_field::-webkit-input-placeholder {
+  color: red;
+}
+.description_field{
+  width: 100%;
+  height: 60px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  resize: none;
+}

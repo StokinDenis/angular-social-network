@@ -1,0 +1,24 @@
+ <div class="form_create_user">
+<form [formGroup]="formGroup">
+  <div>
+    <input class="create_input" formControlName="name" type="text" placeholder="Укажите имя">
+  </div>
+  <div>
+    <input class="create_input" formControlName="age" type="text" placeholder="укажите возраст контакта" maxlength=10>
+<!--    {{nameControl.errors | json}}-->
+  </div>
+  <div>
+    <input class="create_input" formControlName="role" placeholder="укажите роль контакта">
+  </div>
+  <div>
+    <textarea class="description_field" formControlName="description" placeholder="добавьте описание"></textarea>
+  </div>
+
+  <div>
+    <div>
+    <input id="files" type="file">
+    </div>
+  </div>
+ <button (click)="addContact()">add contact</button>
+</form>
+</div>

@@ -1,0 +1,38 @@
+<div>
+  <div class="user" *ngIf="isAuth$ | async">
+    <div *ngIf="user$ | async as user">
+  <div>
+    <img class="user_avatar" src="/assets/avatar.jpg" alt="">
+  </div>
+    <div>
+  <div class="user_name" >{{user.name }}</div>
+      <form [formGroup]="formGroup">
+        <img (click)="visibilityOff()" class="img_pensil" src="/assets/pencil-solid.svg" alt="">
+        <div [ngClass]="{hidden_refactor_form:visibility}">
+        <input formControlName="name" class="refactor_name" type="text">
+        <div>
+        <button (click)="changeName(formGroup.value.name!)" class="change_name_button">Изменить имя</button>
+        </div>
+        </div>
+      </form>
+    <div class="user_info">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at, blanditiis deserunt
+      dolor error esse fuga iure magnam maxime molestiae neque quia ratione repudiandae sed,
+      similique, sit tempora totam ut.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at, blanditiis deserunt
+      dolor error esse fuga iure magnam maxime molestiae neque quia ratione repudiandae sed,
+      similique, sit tempora totam ut.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at, blanditiis deserunt
+      dolor error esse fuga iure magnam maxime molestiae neque quia ratione repudiandae sed,
+      similique, sit tempora totam ut.
+    </div>
+      <div  class="change_link"><a routerLink="/changeData" [ngStyle]="{textDecoration: 'none',color: 'white'}">изменить пользовательские данные</a></div>
+      <app-dropdown [options]="arr"></app-dropdown>
+      <app-color-picked></app-color-picked>
+      <app-textfield></app-textfield>
+      <app-post-form></app-post-form>
+      <app-posts></app-posts>
+  </div>
+  </div>
+</div>
+

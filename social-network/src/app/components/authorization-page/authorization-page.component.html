@@ -1,0 +1,17 @@
+<div class="form_create_user">
+  <form class="login_form" [formGroup]="formGroup">
+    <div>
+      <input [ngClass]={not_empty_field:!emptyField} formControlName="name" class="create_input" type="text" placeholder="Укажите имя">
+    </div>
+   <div>{{userDoesNotExist}}</div>
+    <div>
+      <input [ngClass]={not_empty_field:!emptyField} class="create_input" type="password" formControlName="password" placeholder="password">
+    </div>
+    <div>{{suitablePassword}}</div>
+
+    <div class="login">
+      <button class="login_button" (click)="logIn()">log in</button>
+    </div>
+
+  </form>
+</div>

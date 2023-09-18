@@ -1,0 +1,8 @@
+<div class="wrapper">
+
+  <app-header *ngIf="isAuth$|async"></app-header>
+  <main [ngClass]="{content:isAuth$|async, colo:bo}">
+    <router-outlet></router-outlet>
+  </main>
+  <app-footer *ngIf="isAuth$|async"></app-footer>
+</div>

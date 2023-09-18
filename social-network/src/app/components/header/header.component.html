@@ -1,0 +1,15 @@
+<header>
+
+  <ng-container *ngIf="(userStore.selectIsAuth() | async); else noUserContent">
+   <a routerLink="/myPage">My Page</a>
+
+   <a routerLink="/contacts">Contacts</a>
+
+   <a routerLink="/news">News</a>
+ </ng-container>
+
+  <ng-template #noUserContent>
+
+  </ng-template>
+
+</header>

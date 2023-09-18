@@ -1,0 +1,4 @@
+<div>выберите свою роль</div>
+<select class="dropdown" [ngModel]="selectedOption" (ngModelChange)="onChange($event)">
+  <option *ngFor="let option of options">{{ option.label }}</option>
+</select>

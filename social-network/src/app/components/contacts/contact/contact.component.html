@@ -1,0 +1,11 @@
+<div class="contact">
+   <div>
+     <img class="ava_contact" [src]="contact.avatar"  alt="">
+   </div>
+  <div class="contact_info">
+    <span class="name_contact">{{contact.name}}</span>
+    <span>{{contact.age}}</span>
+    <div class="role_contact">{{contact.role}}</div>
+  </div>
+  <a class="link_contact" [routerLink]="'/contacts/' + contact.id">{{contact.name}}</a>
+</div>
