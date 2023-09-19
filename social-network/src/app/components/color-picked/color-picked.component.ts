@@ -9,28 +9,13 @@ import {FormsModule} from "@angular/forms";
   imports: [CommonModule,FormsModule],
   templateUrl: './color-picked.component.html',
   styleUrls: ['./color-picked.component.scss'],
-  providers:[
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(()=>ColorPickedComponent),
-      multi:true
-    }
-  ]
 })
-export class ColorPickedComponent implements ControlValueAccessor{
+export class ColorPickedComponent{
 
-  value:string=''
+  value:string='#000000'
   onChange(){
     console.log(this.value)
   }
-  onTouched(){}
-  writeValue(obj: any) {
-    this.value=obj
-  }
-  registerOnChange(fn: any) {
-    this.onChange=fn
-  }
-  registerOnTouched(fn: any) {
-    this.onTouched=fn
-  }
+
+
 }

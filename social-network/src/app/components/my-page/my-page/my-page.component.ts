@@ -17,10 +17,11 @@ import {Observable} from 'rxjs';
 import {of} from 'rxjs';
 import {ColorPickedComponent} from "../../color-picked/color-picked.component";
 
+
 @Component({
   selector: 'app-my-page',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, CreateContactComponent, PostComponent, FormsModule, DropdownComponent, Dropdopn1Component, TextfieldComponent, RouterLink, PostFormComponent, PostsComponent, ColorPickedComponent],
+  imports: [CommonModule, ReactiveFormsModule, CreateContactComponent, PostComponent, FormsModule, DropdownComponent, Dropdopn1Component, TextfieldComponent, RouterLink, PostFormComponent, PostsComponent, ColorPickedComponent,],
   templateUrl: './my-page.component.html',
   styleUrls: ['./my-page.component.scss'],
 })

@@ -13,7 +13,7 @@ import {CreateContactComponent} from "../create-contact/create-contact.component
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, ContactComponent, RouterOutlet, RouterLink, ReactiveFormsModule,CreateContactComponent],
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.scss']
+  styleUrls: ['./contacts.component.scss'],
 })
 export class ContactsComponent {
     private readonly userStore = inject(UserStore);
