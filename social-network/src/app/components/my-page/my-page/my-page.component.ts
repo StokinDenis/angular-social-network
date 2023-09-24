@@ -37,7 +37,6 @@ export class MyPageComponent {
     {label: 'designer'},
     {label: 'manager1'},
   ]
-
   public user$ = this.AuthorizationStore.selectUser();
   formGroup = new FormGroup({name: new FormControl("")})
   visibility: boolean = true;

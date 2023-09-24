@@ -4,7 +4,22 @@
   border: 1px solid black;
   margin-right: 40px;
 }
-
+.position_pop_up{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+}
+.pop_up{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  position: fixed;
+  background-color: red;
+}
 .user{
   display: flex;
   margin: 30px 0 0 30px;

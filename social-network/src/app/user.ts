@@ -5,6 +5,5 @@ export interface User {
   role?: string,
   avatar?: string,
   id: number | undefined,
-
   password: string,
 }

@@ -6,7 +6,7 @@ import {User} from "./user";
 
 @Injectable({providedIn: "root"})
 export class UserStore {
-  private readonly isAuth$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  private readonly isAuth$: BehaviorSubject<boolean> = new BehaviorSubject(true);
 
   private readonly contacts$: BehaviorSubject<Contact[]> = new BehaviorSubject<Contact[]>([
     {name: "Ura", age: 24, role: 'developer', avatar: '/assets/ava_contact1.jpg', description: "", id: 1},

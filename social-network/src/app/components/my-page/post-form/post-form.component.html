@@ -1,6 +1,6 @@
 <div class="textarea_block">
   <form [formGroup]="formGroup">
-    <textarea formControlName="post" [ngStyle]="{width:'600px', height:'100px', resize:'none'}"></textarea>
+    <textarea formControlName="post" [ngStyle]="{width:'600px', height:'100px', resize:'none'}" [attr.disabled]=true></textarea>
   </form>
   <div>
     <button class="add_post_button" (click)="addPost()">add post</button>

@@ -1,1 +1,4 @@
-<div class="post">{{post.post}}</div>
+<textarea class="post" [ngClass]="{edit_textarea:borderColorTextarea}" [attr.disabled]="isDisabledTextarea.disabled">{{post.post}}</textarea>
+<div>
+<button (click)="editPost()">{{buttonText}}</button>
+</div>
