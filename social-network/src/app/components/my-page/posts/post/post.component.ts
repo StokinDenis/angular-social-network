@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {PostsStore} from "../../../../posts.store";
 import {Post} from "../../../../post";
-import {Disabled} from "../../../../disabled";
+
 
 @Component({
   selector: 'app-post',
@@ -16,18 +16,18 @@ export class PostComponent {
   public postStore = inject(PostsStore)
   @Input()
   post!: Post
-  isDisabledTextarea: Disabled = {disabled: true}
+  isDisabledTextarea: boolean|null = true
   buttonText: string = 'edit'
   borderColorTextarea:boolean=false
 
   editPost() {
     // console.log(this.postStore.getPosts())
     this.borderColorTextarea=!this.borderColorTextarea
-    if (this.isDisabledTextarea.disabled === null) {
-      this.isDisabledTextarea.disabled = true
-    } else this.isDisabledTextarea.disabled = null
+    if (this.isDisabledTextarea === null) {
+      this.isDisabledTextarea = true
+    } else this.isDisabledTextarea = null
 
-    if (this.isDisabledTextarea.disabled === true) {
+    if (this.isDisabledTextarea === true) {
       this.buttonText = 'edit'
     } else this.buttonText = 'save'
   }
